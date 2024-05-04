@@ -7,25 +7,25 @@ public class Main {
         boolean leapYearConditions = (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
         boolean validYear = year >= 1584;
         if (validYear && leapYearConditions) {
-            System.out.printf(" « %s год — високосный год»", year);
+            System.out.printf("  %s год — високосный год", year);
         } else {
-            System.out.printf(" « %s год — невисокосный год».", year);
+            System.out.printf("  %s год — невисокосный год.", year);
         }
     }
 
     // Задача №2
-    private static void validateDeviceAndYear(int clentDeviceYear, int year) {
+    private static void validateDeviceAndYear(int clientDeviceYear, int year) {
         int ios =0;
         int android=1;
         int currentYear = LocalDate.now().getYear();
-        if (clentDeviceYear == ios && year < currentYear) {
-            System.out.println ("«Установите облегченную версию приложения для iOS по ссылке».");
-        } else if (clentDeviceYear == ios && year >= currentYear) {
-            System.out.println ("«Установите версию приложения для iOS по ссылке».");
-        } else if (clentDeviceYear == android && year < currentYear) {
-            System.out.println("«Установите облегченную версию приложения для Android по ссылке».");
-        } else if (clentDeviceYear == android && year >= currentYear) {
-            System.out.println("«Установите версию приложения для Android по ссылке».");
+        if (clientDeviceYear == ios && year < currentYear) {
+            System.out.println ("Установите облегченную версию приложения для iOS по ссылке.");
+        } else if (clientDeviceYear == ios && year >= currentYear) {
+            System.out.println ("Установите версию приложения для iOS по ссылке.");
+        } else if (clientDeviceYear == android && year < currentYear) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке.");
+        } else if (clientDeviceYear == android && year >= currentYear) {
+            System.out.println("Установите версию приложения для Android по ссылке.");
         } else {
             System.out.println ("Такая система не поддерживается");
         }
@@ -64,8 +64,8 @@ public class Main {
 
         System.out.println("\nЗадача №2_____________________________________________________________________");
         int clientOS = 1;
-        int clentDeviceYear = 2024;
-        validateDeviceAndYear(clientOS, clentDeviceYear);
+        int clientDeviceYear = 2024;
+        validateDeviceAndYear(clientOS, clientDeviceYear);
 
 
 
@@ -80,11 +80,3 @@ public class Main {
 
 
 }
-
-
-
-
-
-
-
-
