@@ -14,17 +14,17 @@ public class Main {
     }
 
     // Задача №2
-    private static void validateDeviceAndYear(int clientDeviceYear, int year) {
+    private static void validateDeviceAndYear(int clentDeviceYear, int year) {
         int ios =0;
         int android=1;
         int currentYear = LocalDate.now().getYear();
-        if (clientDeviceYear == ios && year < currentYear) {
+        if (clentDeviceYear == ios && year < currentYear) {
             System.out.println ("Установите облегченную версию приложения для iOS по ссылке.");
-        } else if (clientDeviceYear == ios && year >= currentYear) {
+        } else if (clentDeviceYear == ios && year >= currentYear) {
             System.out.println ("Установите версию приложения для iOS по ссылке.");
-        } else if (clientDeviceYear == android && year < currentYear) {
+        } else if (clentDeviceYear == android && year < currentYear) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке.");
-        } else if (clientDeviceYear == android && year >= currentYear) {
+        } else if (clentDeviceYear == android && year >= currentYear) {
             System.out.println("Установите версию приложения для Android по ссылке.");
         } else {
             System.out.println ("Такая система не поддерживается");
